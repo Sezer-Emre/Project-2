@@ -1,138 +1,98 @@
-# Project-2
+# E-Commerce Application Infrastructure Project
 
-**Project Name:** "Setting up a Web Server on AWS EC2 with Terraform"
+## Project Description:
+This project aims to create and manage the infrastructure for a real-world e-commerce application using AWS services. Utilizing AWS services, it will develop an online shopping platform where users can browse, add to cart, and place orders for products.
 
-**Project Description:**
+## Project Objectives:
+1. Learn to create an e-commerce application infrastructure using various AWS services such as EC2, RDS, and S3.
+2. Implement automatic management of the infrastructure using Terraform and Ansible.
+3. Ensure smooth operation of the application, considering security and scalability aspects.
 
-This project aims to create an AWS EC2 instance using Terraform and configure it to host a web server. The web server will be used to publish a simple "Hello, World!" web page.
+## Project Steps:
 
-**Project Objectives:**
+### 1. Preparing the Project Infrastructure:
+   - Create an AWS account or use an existing AWS account.
 
-1. Learn how to create an AWS EC2 instance using Terraform.
+### 2. Setting Up the Terraform and Ansible Environment:
+   - Install Terraform and Ansible on your local machine.
+   - Configure AWS credentials for interaction with AWS services.
 
-2. Learn how to install a web server (e.g., Apache or Nginx) on the created EC2 instance.
+### 3. Creating the Infrastructure with Terraform:
+   - Use Terraform to create VPC, subnets, security groups, EC2 instances, RDS databases, and S3 storage.
+   - Dynamically add the created EC2 instance to an Ansible inventory file.
 
-3. Prepare the EC2 instance for publication, ensuring the web page is accessible.
+### 4. Managing the Application with Ansible:
+   - Create an Ansible role to install the application server on the EC2 instance.
+   - Use Ansible for application updates, configuration management, and error handling.
 
-**Project Steps:**
+### 5. Adding SSL/TLS Certificate:
+   - Use Ansible to integrate Let's Encrypt or a similar service for adding SSL/TLS certificates.
 
-1. **Preparing the Project Infrastructure:**
+### 6. Security and Isolation:
+   - Enhance security measures with security groups created by Terraform and configurations made with Ansible.
+   - Configure secure connections between AWS services.
 
-   - Create an AWS account or use an existing one.
+### 7. Scalability and High Availability:
+   - Implement automatic scaling of the application using AWS Auto Scaling.
+   - Configure multi-region backup and high availability for RDS.
 
-2. **Setting Up the Terraform Environment:**
+### 8. Monitoring and Logging:
+   - Monitor application performance using AWS CloudWatch and other relevant services.
+   - Add logging configurations using Ansible.
 
-   - Install Terraform on your local machine.
-   - Configure AWS credentials to interact with AWS services.
+This project targets the creation and management of the infrastructure for a real-world e-commerce application. Upon completion, you will gain significant experience in deploying, updating, and managing applications on AWS. Good luck!
 
-3. **Creating the Terraform Configuration File:**
-
-   - Create a Terraform configuration file (e.g., `main.tf`).
-
-4. **Creating the EC2 Resource:**
-
-   - In the Terraform configuration file, define a resource that creates an EC2 instance. Configure the following properties:
-     - Instance Type: For example, you can use "t2.micro."
-     - Key Pair: Use an existing key pair in AWS or create a new one.
-     - Security Groups: Choose the security groups to be used with the instance, or create a new security group.
-
-5. **Web Server Installation:**
-
-   - Gain SSH or RDP access to the EC2 instance.
-   - Install the relevant web server software (e.g., Apache or Nginx).
-
-6. **Creating a Web Page:**
-
-   - Create a simple "Hello, World!" HTML page.
-
-7. **Web Server Configuration:**
-
-   - Configure the web server to serve the created web page as its root document.
-
-8. **Publishing the Web Page to the EC2 Instance:**
-
-   - Use Terraform to copy the web page to the EC2 instance.
-
-9. **Enabling Internet Access:**
-
-   - Configure the EC2 instance to be publicly accessible by setting up AWS Security Groups and Network ACLs.
-
-10. **Testing Web Page Accessibility:**
-
-    - Test access to the web page by using the EC2 instance's IP address or domain.
-
-This project will help you learn the basics of creating an EC2 instance, setting up a web server, and publishing a web page using Terraform. It will also enhance your ability to manage infrastructure as code. This fundamental project can serve as a starting point for exploring more complex scenarios and further development.
-Best of luck!
 
 **Emre Sezer**
-Z2H Cloud&Devops Admin
+**Z2H Cloud&Devops Admin**
 
 
 *****Türkisch version*****
 
-**Proje Adı:** "Terraform ile AWS EC2 Üzerine Web Sunucusu Kurma"
+# E-Ticaret Uygulaması Altyapısı Oluşturma ve Yönetme Projesi
 
-**Proje Açıklaması:**
+## Proje Açıklaması:
+Bu proje, gerçek bir e-ticaret uygulaması için altyapıyı oluşturmayı ve yönetmeyi amaçlamaktadır. AWS servisleri kullanılarak, kullanıcıların ürünleri inceleyebileceği, sepete ekleyebileceği ve sipariş verebileceği bir çevrimiçi alışveriş platformu oluşturulacaktır.
 
-Bu proje, Terraform kullanarak AWS üzerinde bir EC2 örneği oluşturmayı ve bu örneğe bir web sunucusu kurmayı amaçlamaktadır. Web sunucusu, basit bir "Merhaba, Dünya!" web sayfasını yayınlamak için kullanılacaktır.
+## Proje Amaçları:
+1. AWS üzerinde EC2, RDS, ve S3 gibi çeşitli servisleri kullanarak bir e-ticaret uygulaması altyapısı oluşturmayı öğrenmek.
+2. Terraform ve Ansible kullanarak altyapının otomatik yönetimini uygulamak.
+3. Güvenliği ve ölçeklenebilirliği göz önünde bulundurarak uygulamanın sorunsuz çalışmasını sağlamak.
 
-**Proje Amaçları:**
+## Proje Adımları:
 
-1. Terraform kullanarak AWS'de bir EC2 örneği oluşturmayı öğrenmek.
-
-2. Oluşturulan EC2 örneği üzerine bir web sunucusu (örneğin, Apache veya Nginx) kurmayı öğrenmek.
-
-3. EC2 örneğini yayınlanmaya hazır hale getirerek, web sayfasının erişilebilir olmasını sağlamak.
-
-**Proje Adımları:**
-
-1. **Proje Altyapısının Hazırlanması:**
-
+### 1. Proje Altyapısının Hazırlanması:
    - AWS hesabı oluşturun veya mevcut bir AWS hesabını kullanın.
 
-2. **Terraform Ortamının Hazırlanması:**
+### 2. Terraform ve Ansible Ortamının Hazırlanması:
+   - Terraform ve Ansible'ı bilgisayarınıza yükleyin.
+   - AWS ile etkileşim kurmak için AWS kimlik bilgilerinizi yapılandırın.
 
-   - Terraform'ı bilgisayarınıza yükleyin.
-   - AWS ile etkileşim kurmak için AWS kimlik bilgilerini yapılandırın.
+### 3. Terraform ile Altyapının Oluşturulması:
+   - Terraform ile VPC, subnetler, güvenlik grupları, EC2 örneği, RDS veritabanı ve S3 depolama alanı oluşturun.
+   - Oluşturulan EC2 örneğini dinamik bir Ansible inventory dosyasına ekleyin.
 
-3. **Terraform Konfigürasyon Dosyasının Oluşturulması:**
+### 4. Ansible ile Uygulama Yönetimi:
+   - Ansible rolü oluşturarak, EC2 üzerine uygulama sunucusu kurulumunu gerçekleştirin.
+   - Uygulamanın güncellenmesi, konfigürasyon yönetimi ve hata yönetimi için Ansible kullanın.
 
-   - Bir Terraform konfigürasyon dosyası oluşturun (örneğin, `main.tf`).
+### 5. SSL/TLS Sertifikası Ekleme:
+   - Let's Encrypt veya benzer bir servis kullanarak Ansible ile SSL/TLS sertifikası ekleyin.
 
-4. **EC2 Kaynağının Oluşturulması:**
+### 6. Güvenlik ve İzolasyon:
+   - Terraform ile oluşturulan güvenlik grupları ve Ansible ile yapılan konfigürasyonlarla güvenlik önlemlerini artırın.
+   - AWS servisleri arasında güvenli bağlantıları yapılandırın.
 
-   - Terraform konfigürasyon dosyasında, EC2 örneği oluşturan bir kaynak tanımlayın. Özellikle şunları yapılandırın:
-     - Örnek türü (Instance Type): Örneğin, "t2.micro" kullanabilirsiniz.
-     - Özel anahtar (Key Pair): AWS'de tanımlı bir anahtar çifti kullanın veya yeni bir anahtar çifti oluşturun.
-     - Güvenlik grupları (Security Groups): Örneği kullanacağınız güvenlik gruplarını seçin veya yeni bir güvenlik grubu oluşturun.
+### 7. Ölçeklenebilirlik ve Yüksek Erişilebilirlik:
+   - AWS Auto Scaling kullanarak uygulamanın otomatik olarak ölçeklenmesini sağlayın.
+   - RDS için çoklu bölge yedeklemeyi ve yüksek erişilebilirliği yapılandırın.
 
-5. **Web Sunucusu Kurulumu:**
+### 8. Monitoring ve Loglama:
+   - AWS CloudWatch ve diğer uygun servisler kullanarak uygulamanın performansını izleyin.
+   - Ansible ile loglama yapılandırması ekleyin.
 
-   - EC2 örneğine SSH veya RDP ile erişim sağlayın.
-   - İlgili web sunucusunu (örneğin, Apache veya Nginx) kurun.
+Bu proje, gerçek hayatta bir e-ticaret uygulamasının altyapısını oluşturmayı ve yönetmeyi hedefler. Projeyi tamamladıktan sonra, AWS üzerinde uygulama dağıtımı, güncellenmesi ve yönetilmesi konularında önemli bir deneyim kazanmış olacaksınız. İyi çalışmalar!
 
-6. **Web Sayfası Oluşturma:**
-
-   - Bir basit "Merhaba, Dünya!" HTML sayfası oluşturun.
-
-7. **Web Sunucusu Yapılandırması:**
-
-   - Web sunucusunun kök dizinini oluşturulan web sayfasının yerine işaret edecek şekilde yapılandırın.
-
-8. **Web Sayfasını EC2 Örneğine Yayınlama:**
-
-   - Terraform ile web sayfasını EC2 örneğine kopyalayın.
-
-9. **İnternet Erişimini Sağlama:**
-
-   - EC2 örneğinizin, dünyaya açık bir şekilde erişilebilmesini sağlamak için AWS Güvenlik Grupları ve IP tablolarını yapılandırın.
-
-10. **Web Sayfasının Erişimini Test Etme:**
-
-    - EC2 örneğinizin IP adresini veya alan adını kullanarak web sayfasına erişimi test edin.
-
-Bu proje, temel bir EC2 örneği oluşturmanın yanı sıra bir web sunucusu kurmayı ve web sayfasını yayınlamayı öğrenmenize yardımcı olacaktır. Ayrıca, Terraform kullanarak altyapıyı kodla yönetme yeteneklerini geliştireceksiniz. Bu temel proje, daha karmaşık senaryoları incelemek ve geliştirmek için harika bir başlangıç olabilir.
-BASARILAR!
 
 **Emre Sezer**
 **Z2H Coud&DevOps Admin**
