@@ -2,7 +2,7 @@
 
 ## Project Description:
 This project aims to create and manage the infrastructure for a real-world e-commerce application using AWS services. Utilizing AWS services, it will develop an online shopping platform where users can browse, add to cart, and place orders for products. 
-
+   
 ## Project Objectives:
 1. Learn to create an e-commerce application infrastructure using various AWS services such as EC2, RDS, and S3.
 2. Implement automatic management of the infrastructure using Terraform and Ansible.
